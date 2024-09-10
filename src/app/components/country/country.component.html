@@ -1,0 +1,23 @@
+<div class="country-page__container">
+  <button
+    mat-raised-button
+    (click)="navigateToHome()"
+    class="country-page__navigation"
+  >
+    Go to Home
+  </button>
+  <app-country-widget
+    class="country-page__country-info"
+    [countryCode]="countryCode"
+    [year]="yearControl.value"
+  ></app-country-widget>
+  <mat-chip-listbox
+    aria-label="Year selection"
+    [formControl]="yearControl"
+    class="country-page__year-pagination"
+  >
+    <mat-chip-option *ngFor="let year of yearsInterval" [value]="year">
+      {{ year }}
+    </mat-chip-option>
+  </mat-chip-listbox>
+</div>

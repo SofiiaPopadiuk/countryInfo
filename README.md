@@ -1,27 +1,82 @@
-# CountryInfo
+# Country Info
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+This is a simple Angular application designed to provide detailed information about countries.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Before running the application, ensure you have [Node.js](https://nodejs.org/) installed.
 
-## Code scaffolding
+## Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To set up the project on your local machine, follow these steps:
 
-## Build
+1. **Install Dependencies**  
+   Execute the following command to install all required dependencies:
+   ```bash
+   npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Start the Application**  
+   Run the development server with:
+   ```bash
+   npm start
 
-## Running unit tests
+This will start the Angular application, and you can view it in your browser at http://localhost:4200.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Additional Libraries Used
 
-## Running end-to-end tests
+- **Angular Material**: A UI component library for Angular. [Learn more](https://material.angular.io/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Configuration
 
-## Further help
+### Environment Variables
+Manage environment-specific settings using a `.env` file.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### ESLint and Prettier
+The project uses ESLint for linting and Prettier for code formatting.
+
+- **ESLint**: Run `npm run lint` to check for linting issues.
+- **Prettier**: Run `npm run format` to format the code according to the Prettier configuration.
+
+### Configuration Files
+- **.eslintrc.json**: Configuration for ESLint.
+- **.prettierrc**: Configuration for Prettier.
+
+## Application features:
+- Search for countries by name.
+- View holidays for a selected country in a specified year.
+
+## Table of Contents
+1. [Application Structure](#application-structure)
+2. [Components](#components)
+3. [Configs](#configs)
+4. [Interceptors](#interceptors)
+5. [Models](#models)
+6. [SCSS](#scss)
+7. [Services](#services)
+
+## Application Structure
+
+### Components
+The components folder contains all the UI-related files divided into different features.
+
+### Configs
+- country.config.ts: This file contains configuration details, such as
+widgetNumber - specifies the number of country widgets displayed on the homepage.
+yearInterval - defines the range of years available for checking country holidays.
+
+### Interceptors
+- base-url.interceptor.ts: This interceptor ensures that all outgoing HTTP requests use a base URL
+
+### Models
+This folder contains the application's data models, defining the structure of the data objects used in the application.
+
+### SCSS
+- Containing SCSS media queries and breakpoints to ensure scalability and maintainability.
+
+### Services
+This folder contains services used across the application. Services are typically used to handle business logic and interactions with external APIs.
+
+## Points for Improvement
+- Integrate NgRx to manage state and prevent duplicate requests, enhancing performance.
+- Implement a loader to display during request processing.
+- As functionality expands, consider modularizing the code to maintain organization and scalability.

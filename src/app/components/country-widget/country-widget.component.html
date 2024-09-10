@@ -1,0 +1,11 @@
+<mat-card *ngIf="country$ | async as country" class="country-widget__container">
+  <mat-card-header class="country-widget__name">
+    <mat-card-title>{{ country.officialName }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="countryHolidays$ | async as countryHolidays">
+    <p *ngFor="let holiday of countryHolidays" class="country-widget__holiday">
+      {{ holiday.name }} - {{ holiday.date | date: 'longDate' }}
+      <span *ngIf="year">, {{ holiday.types.join(', ') }} </span>
+    </p>
+  </mat-card-content>
+</mat-card>

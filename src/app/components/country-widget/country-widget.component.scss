@@ -1,0 +1,9 @@
+@import '../../scss/breakpoints';
+
+.country-widget {
+  &__container {
+    @media (min-width: $desktop-breakpoint) {
+      min-width: 500px;
+    }
+  }
+}

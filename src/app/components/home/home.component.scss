@@ -1,0 +1,18 @@
+.home-page {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+
+    .countries-info {
+      &__item {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__countries-info {
+    flex-direction: column;
+  }
+}

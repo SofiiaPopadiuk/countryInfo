@@ -1,0 +1,17 @@
+<div *ngIf="countries$ | async as countries" class="home-page__container">
+  <app-country-search
+    [countries]="countries"
+    class="home-page__search"
+  ></app-country-search>
+  <div
+    *ngIf="randomCountries$ | async as randomCountries"
+    class="home-page__countries-info countries-info"
+  >
+    <h1>Did you know these holidays?</h1>
+    <app-country-widget
+      *ngFor="let country of randomCountries"
+      class="countries-info__item"
+      [countryCode]="country.countryCode"
+    ></app-country-widget>
+  </div>
+</div>
